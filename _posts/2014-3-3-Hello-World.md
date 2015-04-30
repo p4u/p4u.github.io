@@ -17,4 +17,5 @@ Let's see if I'm able to maintain the blog updated from now on.
 
 The idea of this site is to provide a few stories related with my computer stuff experience. Not sure if it will be useful for anyone, but let's hope it!
 
-![See u soon](/https://commons.wikimedia.org/wiki/File:Glider.svg)
+One, two, three. Jumping!
+![](/images/jumping.jpg)
