@@ -10,7 +10,7 @@ I amb a computer Enginyer graduated on 2011 in the Politechnic University of Bar
 
 After studying in the University for about 9 years, I must say it is not worth at all. The best way to learn and understand how the computers work is by hacking them. Just open the machine and try to fix it once it stops working (or even before!). Just use the World Wide Web to read and learn about the topics you are interested on. Just participate in some free sofware projects to get knowladge from others.
 
-Be a self-taught person my friend, on one but you can understand things for you.
+Be a self-taught person my friend, no one but you can understand things for you.
 
 ### About my jobs 
 I started working at the 19 years old (while studying) on a software company. As I love the free software movement and GNU/Linux as its main representation, I quickly became a junior systems administrator performing the senior's work. 
