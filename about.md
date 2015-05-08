@@ -9,9 +9,10 @@ published: true
 - Networking expert
 - Hacker and free culture lover
 - Crypto-Anarchist and BitCoin lover
-- Arduino and electronics enthusiast
+- Python, Lua and C are my logic languages
+- Arduino and electronics enthusiast (still learning!)
 - Activist and life's lover
-- I like to give talks, discuss and help people to understand things
+- I like to give talks, discuss, learn and help people to understand things
 - Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and more...
 
 ### About the academia
