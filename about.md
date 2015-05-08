@@ -61,6 +61,10 @@ I also developed a proof-of-concept DNS service which blocks ADS
 And some others that I will add soon ;)
 
 
+___
 
+Cheers!
+
+![](/images/face.jpg)
 
 
