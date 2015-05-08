@@ -5,9 +5,13 @@ published: true
 ---
 
 [PanStamp](http://www.panstamp.com) is a low-cost, low-power and small Arduino device. IMO the most beautiful feature is that it includes a Wireless module which can operate at 400, 800 or 900 MHz in addition to an accelerometer for just 16€ (the whole device).
-So recently I bought two of them to test and have some fun. The first impression it very good, it accomplish all my spectatives. The Wireless protocol implemented (SWAP) is quite powerfull, minimalist and very well designed (of course it does not use WiFi-802.11).
+So recently I bought two of them to test and have some fun. The first impressions are very good, it accomplish all my spectatives. The Wireless protocol implemented (SWAP) is quite powerfull, minimalist and very well designed (of course it does not implement the WiFi-802.11 stack).
 
 ![PanStamp](/images/PanStamp.jpg)
+
+I can imagine many possibilities and nice projects where using the PanStamps, but to start getting familiarized with it I've implemented the following dummy thing.
+
+___
 
 At my place there are free chickens (hens), but lately we are not able to find the eggs (they are hidden somewhere in our garden). So I made a small, proof-of-concept locator device using the PanStamps.
 The idea is simple: attach a PanStamp based transmitter powered by battery to the hen. Once we do not see her in the garden (she will probably be with the eggs) we use the receiver to find it.
