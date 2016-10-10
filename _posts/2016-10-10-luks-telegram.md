@@ -4,17 +4,28 @@ title: Luks disk encryption with SSH decryption and Telegram alerts
 published: true
 ---
 
-If you have a server somewhere in the Internet **it is a must to have the data encrypted**.
-Specially if it is a VPS hosted on some third party location.
+If you have a server somewhere in the Internet, IMO, it is important to have the full data encrypted.
+Specially if it is hosted on some third party location.
+If you do not have access to the HOST machine (for instance you are running a virtual private server), you can never be 100%
+sure of the privacy of your data. Even if the virtual disk is encrypted with LUKS, in runtime the decryption key is
+placed somewhere in the RAM. An addvanced attacker would (in theory) be able to scan the RAM for key-like strings.
+
+
+However I always prefer to encrypt the information, so it is not that easy for an attacker to browse into my private files.
+
+
 Usually the VPS providers does not give you the option to encrypt the root partition, however it can be achieved by hacking a bit.
 I use Hetzner, they have a very powerful and flexible administration interface where you can boot in *rescue mode* to 
 do whatever you want to do to your virtual server. So I installed a plain Debian Linux to afterwars encrypt the root partition.
 
+
 1. Mount /dev/sda1 to /mnt
-2. Copy all data to your local computer: `rsync -vagHl root@your.server:/mnt/ localfolder/`
+2. Copy all data to your local computer: 
+  * `rsync -vagHl root@your.server:/mnt/ localfolder/`
 3. Fdisk /dev/sda an create partitions (sda1=BOOT, sda2=LVM)
 4. Follow [cryptosetup instructions](https://debian-administration.org/article/469/How_to_set_up_an_encrypted_filesystem_in_several_easy_steps)
-5. Copy back the OS data: `rsync -vagHl localfolder/ root@your.server:/mnt/`
+5. Copy back the OS data: 
+  * `rsync -vagHl localfolder/ root@your.server:/mnt/`
 6. Set up [SSH unlock](http://blog.neutrino.es/es/2011/unlocking-a-luks-encrypted-root-partition-remotely-via-ssh/) to decrypt the filesystem using SSH
 
 To this point, when the server boots, the initram (which includes busybox and dropbear) is ready to handle a SSH login.
