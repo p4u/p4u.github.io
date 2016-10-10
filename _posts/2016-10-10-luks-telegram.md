@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Encrypted server with luks. Decrypt key using SSH. Send alert via Telegram
+title: Luks disk encryption with SSH decryption and Telegram alerts
 published: true
 ---
 
-If you have a server somewhere in the Internet it should be a must to have the data encrypted. 
+If you have a server somewhere in the Internet **it is a must to have the data encrypted**.
 Specially if it is a VPS hosted on some third party location.
 Usually the VPS providers does not give you the option to encrypt the root partition, however it can be achieved by hacking a bit.
-I use Hetzner, they have a very powerful and flexible administration interface where you can boot in "rescue mode" to 
+I use Hetzner, they have a very powerful and flexible administration interface where you can boot in *rescue mode* to 
 do whatever you want to do to your virtual server. So I installed a plain Debian Linux to afterwars encrypt the root partition.
 
 1. Mount /dev/sda1 to /mnt
-2. Copy all data to your local computer: rsync -vagHl root@your.server:/mnt/ localfolder/
+2. Copy all data to your local computer: `rsync -vagHl root@your.server:/mnt/ localfolder/`
 3. Fdisk /dev/sda an create partitions (sda1=BOOT, sda2=LVM)
 4. Follow [cryptosetup instructions](https://debian-administration.org/article/469/How_to_set_up_an_encrypted_filesystem_in_several_easy_steps)
-5. Copy back the OS data  rsync -vagHl localfolder/ root@your.server:/mnt/ 
-6. Set up [SSH unlock](http://blog.neutrino.es/es/2011/unlocking-a-luks-encrypted-root-partition-remotely-via-ssh/)
+5. Copy back the OS data: `rsync -vagHl localfolder/ root@your.server:/mnt/`
+6. Set up [SSH unlock](http://blog.neutrino.es/es/2011/unlocking-a-luks-encrypted-root-partition-remotely-via-ssh/) to decrypt the filesystem using SSH
 
 To this point, when the server boots, the initram (which includes busybox and dropbear) is ready to handle a SSH login.
-By writing the passphrase to /lib/cryptsetup/passfifo we will decrypt the partition and the boot process will follow.
+By writing the passphrase to */lib/cryptsetup/passfifo* we will decrypt the partition and the boot process will follow.
 
 However if the server reboots randomly in some moment, we might not notice and it would supose a not acceptable server downtime.
 Sending an e-mail would be a good option, but I like even more to use Telegram because my Android phone is always next to me.
@@ -61,8 +61,11 @@ So the strategy will be as follows:
 
 1. Include the busybox-curl root filesystem in tar.gz format to the standard initram image
 2. Include the telegram_alert script to the initram image
-3. Include an initram script which will be executed automatically to: Uncompress the busybox-curl filessystem. Chroot to it. And execute the telegram script.
-
+3. Include an initram script which will be executed automatically to:
+  * Uncompress the busybox-curl filessystem.
+  * Chroot to it
+  * Execute the telegram script
+ 
 So in our VPS server we will copy four new files (find all of them attached to this post):
 
 1. The root filesystem containing busybox, CURL and SSL: /etc/initramfs-tools/root/busycurl.tar.gz
@@ -70,22 +73,18 @@ So in our VPS server we will copy four new files (find all of them attached to t
 3. The script executed by the initram every 60 seconds to send the alarm: /etc/initramfs-tools/scripts/init-top/send_decrypt_alert
 4. The hook telegram script is executed by initramfs-tools to include the required files into the resulting initram: /etc/initramfs-tools/hooks/telegram
 
-Once you copied these four files you must run: 
-```Bash
-update-initramfs -u -v
-```
+Once you copied these four files you must run:
+`update-initramfs -u -v`
 
 And finally reboot your server to check that it works. If something wrong you can SSH login to the initram to debug the problem:
-```Bash
-ssh -o "UserKnownHostsFile=~/.ssh/known_hosts.initramfs" your.vps.server.com -i .ssh/id_rsa_nil
-```
+`ssh -o "UserKnownHostsFile=~/.ssh/known_hosts.initramfs" your.vps.server.com -i .ssh/id_rsa_nil`
 
 I've included an ssmtp binary copy to the busybox filesystem. Would be nice to, in addition to telegram, send e-mail alert using this tiny MTA agent.
 If you manage to do it, send me the info so I'll extend this article.
 
 ### /etc/initramfs-tools/scripts/init-top/send_decrypt_alert
 
-```Bash
+```bash
 #!/bin/sh
 
 # This part is to be compatible with initramfs-tools
@@ -124,7 +123,7 @@ send_alarm &
 
 ### /etc/initramfs-tools/hooks/telegram
 
-```Bash
+```bash
 #!/bin/sh
 
 PREREQ=""
@@ -149,7 +148,7 @@ copy_exec /etc/initramfs-tools/root/telegram_alert /root/telegram_alert
 
 ### /etc/initramfs-tools/root/telegram_alert
 
-```Bash
+```bash
 #!/bin/sh
 #message=$( cat )
 message="Server foo.bar needs to decrypt the key"
