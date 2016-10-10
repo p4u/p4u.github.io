@@ -24,11 +24,13 @@ However if the server reboots randomly in some moment, we might not notice and i
 Sending an e-mail would be a good option, but I like even more to use Telegram because my Android phone is always next to me.
 So let's see how to achieve this. We have to modify the initram to send a Telegram when the system is waiting to decrypt the disk.
 
+#### Curl + SSL + Telegram = InitRam
+
 This is a script which uses "curl" to send Telegram messages (we will call this script telegram-alert).
 To create an api token you need to open a Telegram chat to Botfather and create a new Bot. Then you must start a conversation with it (search for the name you gave to him).
 To get your own chat ID you can use this [Bot](https://telegram.me/get_id_bot).
 
-```Bash
+```bash
 #!/bin/sh
 #message=$( cat )
 message="Server foo.bar needs to decrypt the key"
@@ -59,24 +61,26 @@ Here you can download the one I'm using: [busycurl.tar.gz](https://github.com/p4
 
 So the strategy will be as follows:
 
-1. Include the busybox-curl root filesystem in tar.gz format to the standard initram image
-2. Include the telegram_alert script to the initram image
-3. Include an initram script which will be executed automatically to:
+1. Include the **busybox-curl root filesystem** in tar.gz format to the standard initram image
+2. Include the **telegram_alert script** to the initram image
+3. Include an **initram script** which will be executed automatically to:
   * Uncompress the busybox-curl filessystem.
   * Chroot to it
   * Execute the telegram script
  
 So in our VPS server we will copy four new files (find all of them attached to this post):
 
-1. The root filesystem containing busybox, CURL and SSL: /etc/initramfs-tools/root/busycurl.tar.gz
-2. The script which sends the telegram alert using CURL: /etc/initramfs-tools/root/telegram_alert
-3. The script executed by the initram every 60 seconds to send the alarm: /etc/initramfs-tools/scripts/init-top/send_decrypt_alert
-4. The hook telegram script is executed by initramfs-tools to include the required files into the resulting initram: /etc/initramfs-tools/hooks/telegram
+* The root filesystem containing busybox, CURL and SSL: **/etc/initramfs-tools/root/busycurl.tar.gz**
+* The script which sends the telegram alert using CURL: **/etc/initramfs-tools/root/telegram_alert**
+* The script executed by the initram every 60 seconds to send the alarm: **/etc/initramfs-tools/scripts/init-top/send_decrypt_alert**
+* The hook telegram script is executed by initramfs-tools to include the required files into the resulting initram: **/etc/initramfs-tools/hooks/telegram**
 
 Once you copied these four files you must run:
+
 `update-initramfs -u -v`
 
 And finally reboot your server to check that it works. If something wrong you can SSH login to the initram to debug the problem:
+
 `ssh -o "UserKnownHostsFile=~/.ssh/known_hosts.initramfs" your.vps.server.com -i .ssh/id_rsa_nil`
 
 I've included an ssmtp binary copy to the busybox filesystem. Would be nice to, in addition to telegram, send e-mail alert using this tiny MTA agent.
