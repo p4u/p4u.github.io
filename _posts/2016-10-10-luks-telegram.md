@@ -70,10 +70,14 @@ So the strategy will be as follows:
  
 So in our VPS server we will copy four new files (find all of them attached to this post):
 
-* The root filesystem containing busybox, CURL and SSL: **/etc/initramfs-tools/root/busycurl.tar.gz**
-* The script which sends the telegram alert using CURL: **/etc/initramfs-tools/root/telegram_alert**
-* The script executed by the initram every 60 seconds to send the alarm: **/etc/initramfs-tools/scripts/init-top/send_decrypt_alert**
-* The hook telegram script is executed by initramfs-tools to include the required files into the resulting initram: **/etc/initramfs-tools/hooks/telegram**
+* The root filesystem containing busybox, CURL and SSL 
+  * */etc/initramfs-tools/root/busycurl.tar.gz*
+* The script which sends the telegram alert using CURL
+  * */etc/initramfs-tools/root/telegram_alert*
+* The script executed by the initram every 60 seconds to send the alarm:
+  * */etc/initramfs-tools/scripts/init-top/send_decrypt_alert*
+* The hook telegram script is executed by initramfs-tools to include the required files into the resulting initram:
+  * */etc/initramfs-tools/hooks/telegram*
 
 Once you copied these four files you must run:
 
