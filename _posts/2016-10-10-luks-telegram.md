@@ -125,10 +125,14 @@ esac
 
 send_alarm()
 {
-  while true; do
+  n=0
+  while [ $n -lt 10 ]; do
   chroot $DEST /bin/telegram_alert
-  sleep 60
+  [ $? -eq 0 ] && exit 0
+  sleep 30
+  n=$(($n+1))
   done
+  exit 0
 }
 
 DEST="/busycurl"
