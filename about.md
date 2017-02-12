@@ -10,7 +10,8 @@ published: true
 - Hacker and free culture lover
 - Crypto-Anarchist and BitCoin lover
 - Python, Lua and C are my logic languages
-- Arduino and electronics enthusiast (still learning!)
+- Arduino and electronics enthusiast
+- I like tools and technology, in general
 - Activist and life's lover
 - I like to give talks, discuss, learn and help people to understand things
 - Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and more...
@@ -35,9 +36,9 @@ After three years working in the University, I'm now officialy uneployed (ouh ye
 ### My projects
 I am a BitCoin and crypto-anarchist lover. I really think the block-chain concept will became something very important soon.
 
-- I developed and manage this [pool](http://magicpool.org)
-- I forked and deeply modifyed the [stratum-proxy](https://github.com/p4u/stratum-proxy-ng)
-- I developed from scratch a new concept proxy named [stratum-relay](https://github.com/p4u/stratum-relay)
+- I developed and manage an altcoin smart minig pool named magicpool (now it is closed)
+- I made my own version of the [stratum-proxy](https://github.com/p4u/stratum-proxy-ng) for magicpool
+- I developed from scratch a new concept proxy named [stratum-relay](https://github.com/p4u/stratum-relay) for gawminers
 
 I participate in the free/commons network movement
 
@@ -56,7 +57,7 @@ I participate in the OpenWRT project as contributor
 
 I also developed a proof-of-concept DNS service which blocks ADS
 
-- [noADns](http://noadns.org)
+- [noADns](http://noadns.tk)
 
 And some others that I will add soon ;)
 
