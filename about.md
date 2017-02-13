@@ -64,5 +64,3 @@ And some others that I will add soon ;)
 
 Cheers!
 
-![me](https://avatars3.githubusercontent.com/u/1075446?v=3&s=460)
-
