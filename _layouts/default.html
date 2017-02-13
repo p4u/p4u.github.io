@@ -17,19 +17,14 @@
 
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="/">Blog Index</a></li>
-          <li class="fork"><a href="/about">Brushstrokes about me</a></li>
-        </nav>
-      </div><!-- end header -->
-
     <div class="wrapper">
 
       <section>
         <div id="title">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <img>/images/avatar.png</img>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <a href="/"><strong>Blog Index</strong></a> | <a href="{{ site.baseurl }}/about"><strong>Brushstrokes about me</strong></a>
           <hr>
         </div>
 
