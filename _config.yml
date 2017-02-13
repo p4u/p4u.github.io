@@ -88,3 +88,9 @@ exclude:
   - CNAME
 
 theme: jekyll-theme-midnight
+
+# Theme specific options
+title: p4u's blog
+description: plug&hack
+show_downloads: false
+
