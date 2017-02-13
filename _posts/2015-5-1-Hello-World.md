@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hello world
+title: Hello world
 published: true
 ---
 

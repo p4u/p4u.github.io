@@ -1,6 +1,6 @@
 ---
 layout: post
-title: playing with arduino PanStamp
+title: Playing with arduino PanStamp
 published: true
 ---
 
