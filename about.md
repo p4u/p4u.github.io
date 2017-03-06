@@ -7,14 +7,14 @@ published: true
 
 - GNU/Linux expert
 - Networking expert
-- Hacker and free culture lover
-- Crypto-Anarchist and BitCoin lover
+- Hacker of computers, things and technology in general
+- CyberPunk, OpenSource and Free Culture lover 
+- Crypto-Anarchist and BitCoin enthusiast
 - Python, Lua and C are my logic languages
 - Arduino and electronics enthusiast
-- I like tools and technology, in general
 - Activist and life's lover
-- I like to give talks, discuss, learn and help people to understand things
-- Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and more...
+- I like to discuss about any topic, learn and help people to understand things
+- Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and the Big Brother conspiracy
 
 ### About the academia
 I amb a computer Enginyer graduated on 2011 in the Polytechnic University of Barcelona (UPC). In addition on 2014 I finished a Master focused on Free Software in the Open University of Catalonia (UOC).
@@ -24,43 +24,36 @@ After studying in the Academia for about 9 years, I must say it is not worth at 
 Be a self-taught person my friend, no one but you can understand things for you.
 
 ### About my jobs 
-I started working at the 19 years old (while studying) on a software company. As I love the free software movement and GNU/Linux as its main representation, I quickly became a junior systems administrator performing the senior's work. 
+I started working when I was 19 (while studying) on a software company as a GNU/Linux systems administrator. During the next 6 years I jumped over several private companies.
 
-Until the age of 25 I worked in several private companies, all of them related with GNU/Linux.
+At the age of 25 (when I finished my degree) I jumped into the University research world. At the same time I became deeply involved in the [Guifi.net](http://guifi.net) project.  Thanks to this fact I was able to participate in several research projects funded by the European Comission (FP7).
 
-At the age of 25 (when I finished my degree) I jumped into the University research world. In addition to the free software I also love the free networks movement. So I got very involved in the Guifi.net project. Thanks to this fact I was able to participate in a research funded by the European Comission.
+After three years working in the University and after finishing my Master, I decided to quit.
 
-After three years working in the University, I'm now officialy uneployed (ouh yeah!), so I devote the time to my own projects. Among the computer stuff I also spend the day maintaining my garden and taking care of my chickens.
-
+I'm now devoting most of the time to my own life projects like growing my garden and building/fixing my house. On my spare time I'm working in the [LibreRouter](http://Librerouter.org) project among others.
 
 ### My projects
-I am a BitCoin and crypto-anarchist lover. I really think the block-chain concept will became something very important soon.
+Related with BitCoin and BlockChain in general
 
 - I developed and manage an altcoin smart minig pool named magicpool (now it is closed)
 - I made my own version of the [stratum-proxy](https://github.com/p4u/stratum-proxy-ng) for magicpool
 - I developed from scratch a new concept proxy named [stratum-relay](https://github.com/p4u/stratum-relay) for gawminers
 
-I participate in the free/commons network movement
+Related with the free/commons network stuff I activelly participate
 
 - [Guifi.net](http://guifi.net)
 - [BattleMesh](http://battlemesh.org)
 
-I am one of the main developers of three projects related with Wireless Mesh networking.
+And I'm co-founder and current developer of these projects
 
 - [The Quick Mesh Project](http://qmp.cat)
 - [The Libre Mesh Project](http://libre-mesh.org)
+- [The Libre Router Project](http://librerouter.org)
 - [WiBed](http://github.com/battlemesh/wibed)
 
-I participate in the OpenWRT project as contributor
+Sometimes I participate in the OpenWRT and LEDE project as contributor
 
 - [OpenWRT Linux](http://openwrt.org)
+- [LEDE](http://lede-project.org)
 
-I also developed a proof-of-concept DNS service which blocks ADS
-
-- [noADns](http://noadns.tk)
-
-And some others that I will add soon ;)
-
-
-Cheers!
-
+And I'm also doing small contributions to many other projects but the previous are the bigger ones (check my github account for more details).
