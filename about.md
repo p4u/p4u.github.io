@@ -7,13 +7,11 @@ published: true
 
 - GNU/Linux expert
 - Networking expert
-- Hacker of computers, things and technology in general
-- CyberPunk, OpenSource and Free Culture lover 
-- Crypto-Anarchist and BitCoin enthusiast
+- Hacking as a way of life
+- CypherPunk and OpenSource activist
+- Crypto-Anarchist and Blockchain enthusiast
 - Python, Lua and C are my logic languages
 - Arduino and electronics enthusiast
-- Activist and life's lover
-- I like to discuss about any topic, learn and help people to understand things
 - Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and the Big Brother conspiracy
 
 ### About the academia
@@ -28,9 +26,9 @@ I started working when I was 19 (while studying) on a software company as a GNU/
 
 At the age of 25 (when I finished my degree) I jumped into the University research world. At the same time I became deeply involved in the [Guifi.net](http://guifi.net) project.  Thanks to this fact I was able to participate in several research projects funded by the European Comission (FP7).
 
-After three years working in the University and after finishing my Master, I decided to quit.
+After three years working in the University and after finishing my Master, I decided to quit. Then I worked in the [LibreRouter](http://Librerouter.org) project among others.
 
-I'm now devoting most of the time to my own life projects like growing my garden and building/fixing my house. On my spare time I'm working in the [LibreRouter](http://Librerouter.org) project among others.
+I'm now devoting most of the time to my own life projects like growing my garden and building/fixing my house. Only on my spare time I take the computer.
 
 ### My projects
 Related with BitCoin and BlockChain in general
@@ -51,9 +49,8 @@ And I'm co-founder and current developer of these projects
 - [The Libre Router Project](http://librerouter.org)
 - [WiBed](http://github.com/battlemesh/wibed)
 
-Sometimes I participate in the OpenWRT and LEDE project as contributor
+In OpenWRT and LEDE as contributor
 
 - [OpenWRT Linux](http://openwrt.org)
 - [LEDE](http://lede-project.org)
 
-And I'm also doing small contributions to many other projects but the previous are the bigger ones (check my github account for more details).
