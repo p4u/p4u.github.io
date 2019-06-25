@@ -10,9 +10,10 @@ published: true
 - Hacking as a way of life
 - CypherPunk and OpenSource activist
 - Crypto-Anarchist and Blockchain enthusiast
-- Python, Lua and C are my logic languages
+- Python, Lua, Shell-Script and GoLang are my logic languages
+- Catalan, English and Spanish are my spoken languages
 - Arduino and electronics enthusiast
-- Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and the Big Brother conspiracy
+- Hater of Faceb00k, Whats4pp, Twitt3r, 1nstagram and the Big Brother stuff
 
 ### About the academia
 I amb a computer Enginyer graduated on 2011 in the Polytechnic University of Barcelona (UPC). In addition on 2014 I finished a Master focused on Free Software in the Open University of Catalonia (UOC).
